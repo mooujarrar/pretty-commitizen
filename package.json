@@ -1,0 +1,92 @@
+{
+  "name": "pretty-commitizen",
+  "displayName": "pretty-commitizen",
+  "description": "This is the ultimate extension to make your commit messages the prettiest ever.",
+  "publisher": "mooujarrar",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.103.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "pretty-commitizen.run",
+        "title": "Run Pretty Commitizen",
+        "icon": "assets/icon.svg"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "pretty-commitizen-container",
+          "title": "Pretty Commitizen",
+          "icon": "assets/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "pretty-commitizen-container": [
+        {
+          "type": "webview",
+          "icon": "assets/icon.svg",
+          "id": "pretty-commitizen.launcher",
+          "name": "Pretty Commitizen"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Pretty Commitizen Configuration",
+      "type": "object",
+      "properties": {
+        "pretty-commitizen.reviewers": {
+          "type": "array",
+          "description": "List of reviewers to display in the dropdown.",
+          "default": [
+            { "name": "Alice", "value": "alice" },
+            { "name": "Bob", "value": "bob" }
+          ],
+          "items": {
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "The display name shown in the list"
+              },
+              "value": {
+                "type": "string",
+                "description": "The actual value inserted into the commit message"
+              }
+            }
+          }
+        },
+        "pretty-commitizen.issue-prefix": {
+          "type": "string",
+          "default": "JIRA",
+          "description": "Prefix to be added to the issue number in the commit message (Suffix: JIRA, Issue Nr: 214, Result: JIRA-214)"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^22.x",
+    "@types/vscode": "^1.103.0",
+    "@vscode/test-cli": "^0.0.12",
+    "@vscode/test-electron": "^2.5.2",
+    "eslint": "^9.39.1",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.48.1"
+  }
+}
