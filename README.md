@@ -1,7 +1,7 @@
 # Pretty Commitizen for VS Code
 
 <div align="center">
-  <img src="./assets/logo.png" width="800" alt="Pretty Commitizen Logo" />
+  <img src="https://raw.githubusercontent.com/mooujarrar/pretty-commitizen/refs/heads/main/assets/logo.png" width="800" alt="Pretty Commitizen Logo" />
   <h1>Pretty Commitizen</h1>
   <b>Interactive. Configurable. Beautiful.</b>
 </div>
