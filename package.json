@@ -1,6 +1,10 @@
 {
   "name": "pretty-commitizen",
   "displayName": "pretty-commitizen",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mooujarrar/pretty-commitizen.git"
+  },
   "description": "This is the ultimate extension to make your commit messages the prettiest ever.",
   "publisher": "mooujarrar",
   "version": "0.0.1",
