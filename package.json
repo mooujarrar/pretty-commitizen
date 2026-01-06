@@ -52,8 +52,14 @@
           "type": "array",
           "description": "List of reviewers to display in the dropdown.",
           "default": [
-            { "name": "Alice", "value": "alice" },
-            { "name": "Bob", "value": "bob" }
+            {
+              "name": "Alice",
+              "value": "alice"
+            },
+            {
+              "name": "Bob",
+              "value": "bob"
+            }
           ],
           "items": {
             "properties": {
