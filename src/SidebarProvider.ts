@@ -64,6 +64,7 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
         margin-bottom: 20px;
       }
     `;
+    const scriptUri = webview.asWebviewUri(vscode.Uri.joinPath(this._extensionUri, 'media', 'sidebar.js'));
     
     return `<!DOCTYPE html>
       <html lang="en">
@@ -75,13 +76,7 @@ export class SidebarProvider implements vscode.WebviewViewProvider {
         <body>
           <p>Ready to generate your pretty commit message?</p>
           <button id="startBtn">Start Wizard</button>
-          
-          <script>
-            const vscode = acquireVsCodeApi();
-            document.getElementById('startBtn').addEventListener('click', () => {
-              vscode.postMessage({ type: 'start-wizard' });
-            });
-          </script>
+          <script src="${scriptUri}"></script>
         </body>
       </html>`;
   }

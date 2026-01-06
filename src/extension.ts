@@ -97,31 +97,21 @@ function sendConfig(panel: vscode.WebviewPanel) {
 function getWebviewContent(webview: vscode.Webview, extensionPath: string) {
   const scriptUri = webview.asWebviewUri(vscode.Uri.file(path.join(extensionPath, 'media', 'index.js')));
   const styleUri = webview.asWebviewUri(vscode.Uri.file(path.join(extensionPath, 'media', 'index.css')));
-  const nonce = getNonce();
-  
   return `
     <!DOCTYPE html>
     <html lang="en">
       <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src ${webview.cspSource};">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src ${webview.cspSource} https: data:; style-src ${webview.cspSource}; script-src ${webview.cspSource};">
         <link rel="stylesheet" type="text/css" href="${styleUri}">
         <title>Pretty Commitizen UI</title>
       </head>
       <body>
         <div id="root"></div>
-        <script nonce="${nonce}" src="${scriptUri}"></script>
+        <script src="${scriptUri}"></script>
       </body>
     </html>
     `;
 }
 
-function getNonce() {
-  let text = '';
-  const possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-  for (let i = 0; i < 32; i++) {
-    text += possible.charAt(Math.floor(Math.random() * possible.length));
-  }
-  return text;
-}
