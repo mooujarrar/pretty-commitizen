@@ -5,12 +5,22 @@
     "type": "git",
     "url": "https://github.com/mooujarrar/pretty-commitizen.git"
   },
+  "bugs": {
+    "url": "https://github.com/mooujarrar/pretty-commitizen/issues",
+    "email": "mohyiddineoujarrar@gmail.com"
+  },
+  "homepage": "https://github.com/mooujarrar/pretty-commitizen/blob/main/README.md",
+  "author": {
+    "name": "Mohyiddine Oujarrar (https://mooujarrar.github.io/)"
+  },
   "description": "This is the ultimate extension to make your commit messages the prettiest ever.",
   "publisher": "mooujarrar",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "engines": {
     "vscode": "^1.103.0"
   },
+  "pricing": "Free",
+  "license": "SEE LICENSE IN LICENSE",
   "icon": "assets/logo.png",
   "categories": [
     "Other"
@@ -22,7 +32,7 @@
       {
         "command": "pretty-commitizen.run",
         "title": "Run Pretty Commitizen",
-        "icon": "assets/icon.svg"
+        "icon": "https://raw.githubusercontent.com/mooujarrar/pretty-commitizen/refs/heads/main/assets/icon.svg"
       }
     ],
     "viewsContainers": {
@@ -30,7 +40,7 @@
         {
           "id": "pretty-commitizen-container",
           "title": "Pretty Commitizen",
-          "icon": "assets/icon.svg"
+          "icon": "https://raw.githubusercontent.com/mooujarrar/pretty-commitizen/refs/heads/main/assets/icon.svg"
         }
       ]
     },
@@ -38,7 +48,7 @@
       "pretty-commitizen-container": [
         {
           "type": "webview",
-          "icon": "assets/icon.svg",
+          "icon": "https://raw.githubusercontent.com/mooujarrar/pretty-commitizen/refs/heads/main/assets/icon.svg",
           "id": "pretty-commitizen.launcher",
           "name": "Pretty Commitizen"
         }
