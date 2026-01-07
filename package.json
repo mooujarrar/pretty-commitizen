@@ -15,7 +15,7 @@
   },
   "description": "This is the ultimate extension to make your commit messages the prettiest ever.",
   "publisher": "mooujarrar",
-  "version": "0.1.2",
+  "version": "0.1.1",
   "engines": {
     "vscode": "^1.103.0"
   },
@@ -32,7 +32,7 @@
       {
         "command": "pretty-commitizen.run",
         "title": "Run Pretty Commitizen",
-        "icon": "https://raw.githubusercontent.com/mooujarrar/pretty-commitizen/refs/heads/main/assets/icon.png"
+        "icon": "assets/icon.png"
       }
     ],
     "viewsContainers": {
@@ -40,7 +40,7 @@
         {
           "id": "pretty-commitizen-container",
           "title": "Pretty Commitizen",
-          "icon": "https://raw.githubusercontent.com/mooujarrar/pretty-commitizen/refs/heads/main/assets/icon.png"
+          "icon": "assets/icon.png"
         }
       ]
     },
@@ -48,7 +48,7 @@
       "pretty-commitizen-container": [
         {
           "type": "webview",
-          "icon": "https://raw.githubusercontent.com/mooujarrar/pretty-commitizen/refs/heads/main/assets/icon.png",
+          "icon": "assets/icon.png",
           "id": "pretty-commitizen.launcher",
           "name": "Pretty Commitizen"
         }
